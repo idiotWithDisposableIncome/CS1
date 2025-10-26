@@ -73,7 +73,9 @@ def clear_list(shopping_list):
 
 # shows the total cost of all items in the list
 def show_total_cost(shopping_list):
-    total = sum(total_cost for item, quantity, cost, total_cost in shopping_list)
+    total = 0
+    for item, quantity, cost, total_cost in shopping_list:
+        total += total_cost
     print(f"The total cost of items in the list is: ${total}")
 
 # prompts user to continue or exit the application, gives break between operations
